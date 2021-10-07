@@ -12,7 +12,7 @@ using Ocelot.DependencyInjection;
 
 namespace GGCGateway
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
