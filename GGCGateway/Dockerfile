@@ -7,10 +7,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
-COPY ["GGCGateway/GGCGateway.csproj", "GGCGateway/"]
-RUN dotnet restore "GGCGateway/GGCGateway.csproj"
+COPY ["GGCGateway.csproj", ""]
+RUN dotnet restore "GGCGateway.csproj"
 COPY . .
-WORKDIR "/src/GGCGateway"
+WORKDIR "/src/."
 RUN dotnet build "GGCGateway.csproj" -c Release -o /app/build
 
 FROM build AS publish
