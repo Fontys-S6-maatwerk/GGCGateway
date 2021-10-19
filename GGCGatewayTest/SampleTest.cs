@@ -1,3 +1,4 @@
+using GGCGateway.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace GGCGatewayTest
@@ -8,7 +9,11 @@ namespace GGCGatewayTest
         [TestMethod]
         public void SampleMethod()
         {
-            Assert.IsTrue(true);
+            int number = 1;
+            int number2 = 2;
+
+            CodeCoverageHaver codeCoverageHaver = new CodeCoverageHaver();
+            Assert.IsTrue(codeCoverageHaver.GiveACoolNumber(number, number2) == 5);
         }
     }
 }
