@@ -67,16 +67,18 @@
     },
     //Solution Service
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/api/Solutions",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "solution-service", // container_name
+          "Host": "solution-service",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/solutions",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamPathTemplate": "/api/solutions/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ],
+      "RouteIsCaseSensitive": false
+
     },
     //Notification Service
     {
