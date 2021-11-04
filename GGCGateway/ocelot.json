@@ -75,10 +75,20 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/solutions/{everything}",
-      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ],
-      "RouteIsCaseSensitive": false
-
+      "UpstreamPathTemplate": "/api/Solutions/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Solutions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "solution-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Solutions",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete", "Options" ]
     },
     //Notification Service
     {
