@@ -2,7 +2,7 @@
   "Routes": [
     //Comment Service
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/api/Comments",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -10,12 +10,12 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/comments",
+      "UpstreamPathTemplate": "/comments",
       "UpstreamHttpMethod": [ "Get" ]
     },
     //Achievement Service
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/api/Achievements",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -23,12 +23,12 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/achievements",
+      "UpstreamPathTemplate": "/achievements",
       "UpstreamHttpMethod": [ "Get" ]
     },
     //Authentication Service
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/api/Authentication",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -36,12 +36,12 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/authentication",
+      "UpstreamPathTemplate": "/authentication",
       "UpstreamHttpMethod": [ "Get" ]
     },
     //User Service
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/api/Users",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -49,12 +49,12 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/users",
+      "UpstreamPathTemplate": "/users",
       "UpstreamHttpMethod": [ "Get" ]
     },
     //Follower Service
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/api/Followers",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -62,25 +62,37 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/followers",
+      "UpstreamPathTemplate": "/followers",
       "UpstreamHttpMethod": [ "Get" ]
     },
     //Solution Service
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/api/Solutions/",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "solution-service", // container_name
+          "Host": "solution-service",
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/solutions",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamPathTemplate": "/solutions/{everything}",
+      "UpstreamHttpMethod": []
+    },
+    {
+      "DownstreamPathTemplate": "/api/Solutions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "solution-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/solutions",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
     },
     //Notification Service
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/api/Notifications",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -88,12 +100,12 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/notifications",
+      "UpstreamPathTemplate": "/notifications",
       "UpstreamHttpMethod": [ "Get" ]
     },
     //Poll Service
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/api/Polls",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -101,12 +113,12 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/polls",
+      "UpstreamPathTemplate": "/polls",
       "UpstreamHttpMethod": [ "Get" ]
     },
     //Impact Calc. Service
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/api/ImpactCalculation",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -114,12 +126,12 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/impact",
+      "UpstreamPathTemplate": "/impactcalculation",
       "UpstreamHttpMethod": [ "Get" ]
     },
     //TwitterBot Service
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/api/TwitterBot",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -127,7 +139,7 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/twitter",
+      "UpstreamPathTemplate": "/twitterbot",
       "UpstreamHttpMethod": [ "Get" ]
     }
   ],
