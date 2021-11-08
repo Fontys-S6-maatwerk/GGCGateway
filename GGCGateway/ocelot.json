@@ -67,7 +67,7 @@
     },
     //Solution Service
     {
-      "DownstreamPathTemplate": "/api/Solutions/",
+      "DownstreamPathTemplate": "/api/Solutions/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
