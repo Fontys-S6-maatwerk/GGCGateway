@@ -88,7 +88,7 @@
         }
       ],
       "UpstreamPathTemplate": "/solutions",
-      "UpstreamHttpMethod": [ "Get", "Post" ]
+      "UpstreamHttpMethod": [ "Get" ]
     },
     //Notification Service
     {
@@ -131,7 +131,7 @@
     },
     //TwitterBot Service
     {
-      "DownstreamPathTemplate": "/api/TwitterBot",
+      "DownstreamPathTemplate": "/tweet/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -139,8 +139,8 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/twitterbot",
-      "UpstreamHttpMethod": [ "Get" ]
+      "UpstreamPathTemplate": "/api/twitter/{everything}",
+      "UpstreamHttpMethod": [ "Get", "POST" ]
     }
   ],
   "GlobalConfiguration": {
