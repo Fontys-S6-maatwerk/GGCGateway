@@ -90,6 +90,18 @@
       "UpstreamPathTemplate": "/solutions",
       "UpstreamHttpMethod": [ "Get" ]
     },
+    {
+      "DownstreamPathTemplate": "/api/SDGs",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "solution-service",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/sdgs",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
     //Notification Service
     {
       "DownstreamPathTemplate": "/api/Notifications",
