@@ -139,7 +139,7 @@
           "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/api/twitter/{everything}",
+      "UpstreamPathTemplate": "/tweet/{everything}",
       "UpstreamHttpMethod": [ "Get", "POST" ]
     }
   ],
