@@ -2,7 +2,7 @@
 De gateway runt op port 5011 (http) en 5001 (https), zie evt. [launchSettings.json](https://github.com/Fontys-S6-maatwerk/GGCGateway/blob/main/GGCGateway/Properties/launchSettings.json). Om deze service te gebruiken in docker kan een image lokaal worden gebuild met `docker build -t ocelot-gateway .` of de [github package](https://github.com/orgs/Fontys-S6-maatwerk/packages?repo_name=GGCGateway) worden gebruikt. 
 Een voorbeeld van docker compose ziet er als volgt uit:
 
-`
+```
 version: '3.8'
 services:
 
@@ -16,7 +16,7 @@ services:
       - overige services ..
       
   ...
-`
+```
 
 # Endpoints
 Voor interfacing tussen Ocelot en de microservices hebben we duidelijke afspraken nodig over het coderen van endpoints en het formaat van de URL's waarmee Ocelot downstream zal communiceren. 
